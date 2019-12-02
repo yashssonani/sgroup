@@ -125,7 +125,7 @@ async def call_apropriate_function(
         #
         err_message = await check_metadata(aria_instance, err_message)
         #
-        await asyncio.sleep(1)
+        await asyncio.sleep(4)
         if err_message is not None:
             await check_progress_for_dl(
                 aria_instance,
