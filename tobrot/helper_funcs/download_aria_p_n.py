@@ -41,7 +41,7 @@ async def aria_start():
     aria2_daemon_start_cmd.append(f"--rpc-listen-port={ARIA_TWO_STARTED_PORT}")
     aria2_daemon_start_cmd.append("--rpc-max-request-size=1024M")
     aria2_daemon_start_cmd.append("--seed-ratio=0.0")
-    aria2_daemon_start_cmd.append("--seed-time=15")
+    aria2_daemon_start_cmd.append("--seed-time=1")
     aria2_daemon_start_cmd.append("--split=10")
     aria2_daemon_start_cmd.append(f"--bt-stop-timeout={MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START}")
     #
@@ -135,7 +135,7 @@ async def call_apropriate_function(
             )
         else:
             return False, "can't get metadata \n\n#stopped"
-    await asyncio.sleep(1)
+    await asyncio.sleep(5)
     file = aria_instance.get_download(err_message)
     response = {}
     LOGGER.info(response)
