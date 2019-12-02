@@ -1,10 +1,10 @@
-TG_BOT_TOKEN = 913300625:AAFiJusmlDuBLEw5mK1yixT8DVBQhdsufnY
+TG_BOT_TOKEN = "913300625:AAFiJusmlDuBLEw5mK1yixT8DVBQhdsufnY"
     # The Telegram API things
-    APP_ID = 1101600
-    API_HASH = f2fab3311f3e9853f6efa7ba52947080
+    APP_ID = "1101600"
+    API_HASH = "f2fab3311f3e9853f6efa7ba52947080"
     # Get these values from my.telegram.org
     # to store the channel ID who are authorized to use the bot
-    AUTH_CHANNEL = -1001404187323
+    AUTH_CHANNEL = "-1001404187323"
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     # Telegram maximum file upload size
