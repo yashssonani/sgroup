@@ -95,8 +95,8 @@ async def cancel_message_f(client, message):
 
 async def exec_message_f(client, message):
     if await AdminCheck(client, message.chat.id, message.from_user.id):
-        DELAY_BETWEEN_EDITS = 3
-        PROCESS_RUN_TIME = 500
+        DELAY_BETWEEN_EDITS = 0.3
+        PROCESS_RUN_TIME = 100
         cmd = message.text.split(" ", maxsplit=1)[1]
 
         reply_to_id = message.message_id
