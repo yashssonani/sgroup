@@ -47,7 +47,7 @@ async def status_message_f(client, message):
             download_current_status = str(download.status)
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
-            #
+            time.sleep(10)
             msg += f"<u>{downloading_dir_name}</u>"
             msg += " | "
             msg += f"{total_length_size}"
