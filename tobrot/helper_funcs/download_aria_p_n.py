@@ -180,6 +180,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
         complete = file.is_complete
         if not complete:
             if not file.error_message:
+                time.sleep(10)
                 msg = f"\nDownloading File: `{file.name}`"
                 msg += f"\nSpeed: {file.download_speed_string()} 🔽 / {file.upload_speed_string()} 🔼"
                 msg += f"\nProgress: {file.progress_string()}"
@@ -196,7 +197,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 msg = file.error_message
                 await event.edit(f"`{msg}`")
                 return False
-                time.sleep(10)
+                
             await asyncio.sleep(1)
             await check_progress_for_dl(aria2, gid, event, previous_message)
         else:
