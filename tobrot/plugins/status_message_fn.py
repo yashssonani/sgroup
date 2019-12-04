@@ -47,7 +47,7 @@ async def status_message_f(client, message):
             download_current_status = str(download.status)
             e_t_a = str(download.eta_string())
             current_gid = str(download.gid)
-            time.sleep(10)
+            
             msg += f"<u>{downloading_dir_name}</u>"
             msg += " | "
             msg += f"{total_length_size}"
@@ -68,9 +68,9 @@ async def status_message_f(client, message):
         LOGGER.info(msg)
         if msg == "":
             msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
-            time.sleep(10)
+            
         await message.reply_text(msg, quote=True)
-        time.sleep(10)
+        
 
 
 async def cancel_message_f(client, message):
